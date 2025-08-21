@@ -1,0 +1,9 @@
+{
+	"name": "githubpractise",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9e0251c1-9754-4dbf-8670-cf758562dfa3",
+		"tenantId": "9760ce79-fb1e-444b-82c6-f8c24dd18ed0"
+	}
+}
