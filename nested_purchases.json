@@ -1,0 +1,79 @@
+[
+    {
+        "customerId": 1,
+        "name": "Ravi Kumar",
+        "location": "Hyderabad",
+        "purchases": [
+            {
+                "item": "Laptop",
+                "price": 55000,
+                "payment": {
+                    "method": "Credit Card",
+                    "status": "Paid"
+                }
+            },
+            {
+                "item": "Mouse",
+                "price": 1200,
+                "payment": {
+                    "method": "UPI",
+                    "status": "Paid"
+                }
+            }
+        ]
+    },
+    {
+        "customerId": 2,
+        "name": "Anita Sharma",
+        "location": "Bangalore",
+        "purchases": [
+            {
+                "item": "Phone",
+                "price": 25000,
+                "payment": {
+                    "method": "Debit Card",
+                    "status": "Pending"
+                }
+            },
+            {
+                "item": "Headphones",
+                "price": 3000,
+                "payment": {
+                    "method": "Cash",
+                    "status": "Paid"
+                }
+            }
+        ]
+    },
+    {
+        "customerId": 3,
+        "name": "Suresh Reddy",
+        "location": "Chennai",
+        "purchases": [
+            {
+                "item": "Tablet",
+                "price": 18000,
+                "payment": {
+                    "method": "Credit Card",
+                    "status": "Paid"
+                }
+            },
+            {
+                "item": "Keyboard",
+                "price": 1500,
+                "payment": {
+                    "method": "UPI",
+                    "status": "Paid"
+                }
+            },
+            {
+                "item": "Charger",
+                "price": 800,
+                "payment": {
+                    "method": "UPI",
+                    "status": "Paid"
+                }
+            }
+        ]
+    }
+]
