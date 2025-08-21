@@ -1,0 +1,9 @@
+{
+	"name": "chaduvukundhamDF",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5d2d01bf-99f4-4dc7-8d0d-d37a6a551978",
+		"tenantId": "9760ce79-fb1e-444b-82c6-f8c24dd18ed0"
+	}
+}

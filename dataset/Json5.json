@@ -1,0 +1,51 @@
+{
+	"name": "Json5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "multi_level_employee.json",
+				"folderPath": "data flows",
+				"fileSystem": "localone"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"empId": {
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"projects": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"projId": {
+								"type": "string"
+							},
+							"projName": {
+								"type": "string"
+							},
+							"skills": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,48 @@
+{
+	"name": "Json4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "order_items_flatten.json",
+				"folderPath": "data flows",
+				"fileSystem": "localone"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"orderId": {
+					"type": "integer"
+				},
+				"customer": {
+					"type": "string"
+				},
+				"items": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"itemId": {
+								"type": "string"
+							},
+							"product": {
+								"type": "string"
+							},
+							"qty": {
+								"type": "integer"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

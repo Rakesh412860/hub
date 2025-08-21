@@ -1,0 +1,68 @@
+{
+	"name": "reverse_json_to_csv",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText7",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText8",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "aggregate1"
+				},
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          customerName as string,",
+				"          email as string,",
+				"          itemId as string,",
+				"          productName as string,",
+				"          price as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 aggregate(groupBy(customerName,",
+				"          email),",
+				"     productName = collect(productName),",
+				"          itemId = collect(itemId),",
+				"          price = collect(price)) ~> aggregate1",
+				"aggregate1 derive(productName = replace (replace (replace (toString(productName),']',''),'[',''),'\"',''),",
+				"          itemId = replace (replace (replace (toString(itemId),']',''),'[',''),'\"',''),",
+				"          price = replace (replace (replace (toString(price),']',''),'[',''),'\"','')) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          StudentID as string,",
+				"          Name as string,",
+				"          Subject as string,",
+				"          Grade as string,",
+				"          Score as string",
+				"     ),",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}
