@@ -1,0 +1,3 @@
+customerId,name,email,purchases
+1,Ravi Kumar,ravi.kumar@example.com,"[{""itemId"": 101, ""itemName"": ""Laptop"", ""quantity"": 1, ""price"": 55000}, {""itemId"": 102, ""itemName"": ""Mouse"", ""quantity"": 2, ""price"": 800}]"
+2,Anita Sharma,anita.sharma@example.com,"[{""itemId"": 201, ""itemName"": ""Mobile"", ""quantity"": 1, ""price"": 15000}, {""itemId"": 202, ""itemName"": ""Headphones"", ""quantity"": 1, ""price"": 2000}]"
